@@ -1,0 +1,26 @@
+{
+  "name": "hashtable",
+  "description": "a basic hash table using linked-list for collisions",
+  "version": "0.0.1",
+  "author": "scottjustin5000",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'src/tests/*' --require should --slow 2000ms --timeout 10000ms"
+  },
+  "engines": {
+    "node": "6.10",
+    "npm": "3.8.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scottjustin5000/hashtable"
+  },
+  "dependencies": {
+    "error": "^7.0.2"
+  },
+  "devDependencies": {
+    "standard": "^9.0.2",
+    "mocha": "^3.2.0",
+    "should": "^11.1.2"
+  }
+}
