@@ -12,6 +12,13 @@ const NotFoundError = TypedError({
   statusCode: 404
 })
 
+const DuplicateKeyError = TypedError({
+  type: 'hashtable.error',
+  message: '{key} already exists, status={statusCode}',
+  key: null,
+  statusCode: 404
+})
+
 class HashTable {
   constructor () {
     this.table = {}
@@ -46,6 +53,10 @@ class HashTable {
     }
 
     let currentItem = this.table[hashId]
+
+    if (currentItem.key === key) {
+      throw DuplicateKeyError({key: key})
+    }
 
     while (currentItem.next) {
       currentItem = currentItem.next
