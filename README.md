@@ -11,8 +11,6 @@ npm test
 
 
 ### Usage
-These services can be used to reply previous games.  To do so, an event will have to be set up in cloud watch to call the ``interval-lambda-dispatcher`` lambda.  
-This event should be configured with the following options:
 ```js
 let hashTable = new HashTable()
 hashTable.add('key', {'prop': 123})
